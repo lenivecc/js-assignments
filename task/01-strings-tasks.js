@@ -206,8 +206,8 @@ function getRectangleString(width, height) {
     let rectang = '';
     //if(width<2 || height<2) return "It's imposible";
     //else{
-    var i=0;
-    var j=0;
+    let i=0;
+    let j=0;
 
 
     for (j = 0; j < height; j++) {
