@@ -54,9 +54,9 @@ function getCicleCircumference(radius) {
  *  -3, 3  => 0
  */
 function getAverage(value1, value2) {
-     if(((value1 + value2) / 2)<=1.7976931348623157e+308)
+     if(((value1 + value2) / 2)<=Number.MAX_VALUE)
      return ((value1+value2)/2);
-    else return 1.7976931348623157e+308;
+    else return Number.MAX_VALUE;
 }
 /**
  * Returns a distance beetween two points by cartesian coordinates.
@@ -186,10 +186,9 @@ function getParallelipidedDiagonal(a,b,c) {
  *   1678, 3  => 2000
  */
 function roundToPowerOfTen(num, pow) {
-    var i=pow;
+    let i=pow;
     let remainder=0;
     while(i!=0){
-        //remainder=(num%10);
         num/=10;
         i--;
     }
@@ -220,12 +219,11 @@ function roundToPowerOfTen(num, pow) {
  *   17 => true
  */
 function isPrime(n) {
-    if(n<=3 || n==5 || n==7) return true;
-    else{
-    if (n%2!=0 && n%3!=0 && n%5!=0 && n%7!=0)
-    return true;
-    else return false;
+        if (n < 2) return false;
+    for (let i = n - 1; i > 1; i--) {
+        if (n % i == 0) return false;
     }
+    return true;
 }
 
 /**
