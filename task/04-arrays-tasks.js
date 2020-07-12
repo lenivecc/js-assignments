@@ -121,11 +121,11 @@ function removeFalsyValues(arr) {
  *    [ 'a', 'b', 'c', 'd', 'e', 'f', 'g' ]  => [ 'A', 'B', 'C', 'D', 'E', 'F', 'G' ]
  */
 function getUpperCaseStrings(arr) {
-   let new_arr = arr.map((currentValue, index, array) => {
+   return arr.map((currentValue, index, array) => {
       currentValue=array[index].toString().toUpperCase();
       return currentValue;
    });
-   return new_arr;
+
 }
 
 
@@ -140,11 +140,10 @@ function getUpperCaseStrings(arr) {
  *    [ 'angular', 'react', 'ember' ] => [ 7, 5, 5 ]
  */
 function getStringsLength(arr) {
-   let new_arr = arr.map((currentValue,index,array) => {
+   return arr.map((currentValue,index,array) => {
       currentValue = array[index].length;
       return currentValue;
    });
-   return new_arr;
 }
 
 /**
@@ -175,8 +174,7 @@ function insertItem(arr, item, index) {
  */
 function getHead(arr, n) {
    return arr.filter(item => {
-      if(arr.indexOf(item) <n)
-   return item; });
+      if(arr.indexOf(item) <n) return item; });
 }
 
 
