@@ -24,6 +24,7 @@
  */
 function findElement(arr, value) {
    return arr.indexOf(value);
+   
 }
 
 /**
